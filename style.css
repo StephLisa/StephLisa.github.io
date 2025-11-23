@@ -1,0 +1,292 @@
+/* Color palette inspired by soft teal / lavender style */
+:root {
+  --bg: #f6f7fb;
+  --bg-alt: #ffffff;
+  --accent: #5bb4b0;        /* teal */
+  --accent-soft: #e3f2f1;   /* very light teal */
+  --accent-strong: #845ec2; /* soft violet accent */
+  --text-main: #2b2d42;
+  --text-muted: #6c6f7f;
+  --border: #dde1f0;
+
+  --badge-python: #3776ab;
+  --badge-matlab: #d9531e;
+  --badge-bash: #3e474a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #f0f4ff, #f6f7fb);
+  color: var(--text-main);
+}
+
+/* Layout */
+
+.page {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+  gap: 2rem;
+}
+
+.sidebar {
+  flex: 0 0 280px;
+  background: var(--bg-alt);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  position: sticky;
+  top: 1.5rem;
+  align-self: flex-start;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Sidebar content */
+
+.profile {
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.name {
+  margin: 0.25rem 0;
+  font-size: 1.5rem;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.contact-block {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.contact-block a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+.links-block {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.links-block a {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text-main);
+  background: #fafbff;
+}
+
+.links-block a:hover {
+  border-color: var(--accent);
+}
+
+/* Navigation */
+
+.nav {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+}
+
+.nav a:hover {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+/* Cards */
+
+.card {
+  background: var(--bg-alt);
+  border-radius: 18px;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Timeline */
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Projects */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 1rem 1.1rem;
+  background: #fbfcff;
+}
+
+.project-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--accent-strong);
+}
+
+.project-link.disabled {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+/* Skills badges */
+
+.skill-badges {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+}
+
+.badge-python {
+  background: var(--badge-python);
+}
+
+.badge-matlab {
+  background: var(--badge-matlab);
+}
+
+.badge-bash {
+  background: var(--badge-bash);
+}
+
+/* Publications */
+
+.pub-list {
+  padding-left: 1rem;
+}
+
+.pub-list li {
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-bottom: 1.5rem;
+}
+
+/* Links */
+
+a {
+  color: var(--accent-strong);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+    padding: 1rem 1rem 3rem;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+}
