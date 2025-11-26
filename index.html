@@ -37,7 +37,7 @@
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#education">Education and Career</a>
-        <a href="#research">Research & Experience</a>
+        <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#publications">Publications</a>
@@ -79,37 +79,61 @@
         </p>
       </section>
 
-      <!-- Research & Experience -->
+      <!-- Research -->
       <section id="research" class="card">
-        <h2>Research & Experience</h2>
-        <ul class="timeline">
-          <li>
-            <h3>Senior Biomedical Data Scientist · DSBU, UNIL</h3>
-            <span class="timeline-date">2025 – present</span>
+        <h2>Research</h2>
+
+        <div class="research-grid">
+          <!-- Research 1 -->
+          <article class="research-card">
+            <h3>Cerebrovascular simulation: fluid dynamics & astrocyte coupling</h3>
+            <div class="research-image-container">
+              <img src="images/astrovascpy.png" alt="AstroVascPy Blood Flow Modeling" class="research-image astrovascpy-image">
+            </div>
             <p>
-              FAIR data stewardship, metadata harmonisation, and automated workflows for biomedical and clinical research
-              across FBM/CHUV; development of tools for data integration and long-term preservation.
+              How do brain cells control blood supply? This study reveals how astrocytes—the brain's support 
+              cells—regulate blood flow through localized vessel diameter changes. Our computational model shows capillaries 
+              as key players in cerebral perfusion, with layer-specific responses across cortical depths.
             </p>
-          </li>
-          <li>
-            <h3>Postdoctoral Researcher · Blue Brain Project (BBP), Swiss Federal Institute of Technology Lausanne,
-              EPFL</h3>
-            <span class="timeline-date">2019 – 2024</span>
+            <p class="research-citation">
+              [Battini et al., Biomedicines, 2025]
+            </p>
+          </article>
+
+          <!-- Research 2 -->
+          <article class="research-card">
+            <h3>Metabolomics in pancreatic cancer: predicting clinical outcomes</h3>
+            <div class="research-image-container">
+              <img src="images/pancreas.jpg" alt="Pancreatic Cancer Research" class="research-image">
+            </div>
             <p>
-              Multi-scale computational modelling of neuro–glia–vascular systems, development of the
-              <a href="https://github.com/BlueBrain/AstroVascPy" target="_blank">AstroVascPy</a> Python library, and HPC
-              simulations of blood-flow dynamics in rodent cortex.
+              Identified metabolic biomarkers to predict survival in pancreatic cancer patients using 
+              HRMAS NMR spectroscopy. Analyzed 106 tumor samples and discovered that ethanolamine levels distinguish 
+              long-term from short-term survivors—a potential clinical biomarker obtainable in 20 minutes during surgery. 
+              This publication demonstrates how metabolomics profiling can guide treatment decisions.
             </p>
-          </li>
-          <li>
-            <h3><strong>Ph.D. in Medical Sciences</strong> · University of Strasbourg</h3>
-            <span class="timeline-date">2013 – 2017</span>
+            <p class="research-citation">
+              [Battini et al., BMC Medicine, 2017]
+            </p>
+          </article>
+
+          <!-- Research 3 -->
+          <article class="research-card">
+            <h3>Metabolomics of hyperfunctioning parathyroid glands</h3>
+            <div class="research-image-container">
+              <img src="images/fluoropara.jpg" alt="Parathyroid Research" class="research-image">
+            </div>
             <p>
-              Metabolomic profiling by HRMAS NMR in hyperparathyroidism and pancreatic cancer; biomarker discovery from
-              patient-derived tissue and survival analysis using multivariate models.
+              Distinguished single-gland from multiglandular disease in primary hyperparathyroidism using HRMAS NMR metabolomics. 
+              Analyzed 43 samples from 32 patients, identifying a 9-metabolite signature (including phosphorylcholine, choline, and glucose) 
+              that accurately differentiates disease subtypes. Applied network analysis with the ADEMA algorithm for metabolite prediction, 
+              offering potential for intraoperative surgical guidance.
             </p>
-          </li>
-        </ul>
+            <p class="research-citation">
+              [Battini et al., Surgery, 2016]
+            </p>
+          </article>
+        </div>
       </section>
 
       <!-- Projects -->
@@ -128,27 +152,37 @@
             <a href="https://github.com/BlueBrain/AstroVascPy" target="_blank" class="project-link">View on GitHub</a>
           </article>
 
-          <!-- Project 2 (placeholder) -->
+          <!-- Project 2 -->
           <article class="project-card">
-            <h3>FAIR Data Workflows (DSBU)</h3>
-            <p class="project-meta">FAIR · Snakemake · Metadata</p>
+            <h3>FAIR Metadata Pipeline</h3>
+            <p class="project-meta">Python · Snakemake · FAIR · Metadata Standards</p>
             <p>
-              Placeholder: here you can describe a Snakemake-based pipeline or DSBU internal tool for harmonising
-              clinical and research data, including validation, metadata extraction, and packaging for long-term archiving.
+              Automated Snakemake-based pipeline for harmonizing clinical and research metadata across multiple data sources. 
+              Implements FAIR principles for improved data interoperability and reusability in biomedical research.
             </p>
-            <!-- Replace # with a real link later -->
-            <a href="#" class="project-link disabled">Coming soon</a>
+            <span class="project-link disabled">In Development</span>
           </article>
 
-          <!-- Project 3 (placeholder) -->
+          <!-- Project 3 -->
           <article class="project-card">
-            <h3>Quality-of-Life Trajectories</h3>
-            <p class="project-meta">Digital Health · Time Series · Machine Learning</p>
+            <h3>Biomedical Data Validation Suite</h3>
+            <p class="project-meta">Python · PHP · Data Quality · Archival Standards</p>
             <p>
-              Placeholder: a project focusing on integrating patient-reported outcomes, wearable data, and clinical events
-              to model long-term quality-of-life trajectories in chronic disease.
+              Comprehensive toolkit for validating, extracting, and packaging clinical research data for long-term archiving. 
+              Ensures compliance with institutional data management standards and facilitates reproducible research workflows.
             </p>
-            <a href="#" class="project-link disabled">Coming soon</a>
+            <span class="project-link disabled">In Development</span>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <h3>Vascular Network Analysis</h3>
+            <p class="project-meta">Python · Graph Theory · Computational Neuroscience</p>
+            <p>
+              Advanced graph-based analysis tools for modeling cerebrovascular blood flow dynamics. 
+              Combines time-series analysis with machine learning approaches to study neuro-vascular coupling mechanisms.
+            </p>
+            <span class="project-link disabled">In Development</span>
           </article>
         </div>
       </section>
@@ -164,19 +198,19 @@
         </p>
 
         <div class="skill-badges">
-          <a class="badge badge-python" href="https://github.com/StephLisa?tab=repositories&q=python" target="_blank">
+          <a class="badge badge-python" href="https://github.com/StephLisa?tab=repositories&q=python" target="_blank" title="More repositories coming soon!">
             Python projects
           </a>
 
-          <a class="badge badge-matlab" href="https://github.com/StephLisa?tab=repositories&q=matlab" target="_blank">
+          <a class="badge badge-matlab" href="https://github.com/StephLisa?tab=repositories&q=matlab" target="_blank" title="Code will be published soon!">
             MATLAB & numerical tools
           </a>
 
-          <a class="badge badge-bash" href="https://github.com/StephLisa?tab=repositories&q=bash" target="_blank">
+          <a class="badge badge-bash" href="https://github.com/StephLisa?tab=repositories&q=bash" target="_blank" title="Code will be published soon!">
             Bash & HPC scripts
           </a>
 
-          <a class="badge badge-r" href="https://github.com/StephLisa?tab=repositories&q=R" target="_blank">
+          <a class="badge badge-r" href="https://github.com/StephLisa?tab=repositories&q=R" target="_blank" title="Code will be published soon!">
             R projects
           </a>
         </div>
